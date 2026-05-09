@@ -2,7 +2,7 @@ import fs from 'fs'
 import fsPromises from 'fs/promises'
 import path from 'path'
 import { pipeline } from 'stream/promises'
-import tar from 'tar'
+import * as tar from 'tar'
 
 export async function cloneRepo(url) {
   const repoId = crypto.randomUUID()
