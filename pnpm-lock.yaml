@@ -58,8 +58,8 @@ importers:
         specifier: 19.2.14
         version: 19.2.14
       typescript:
-        specifier: 6.0.3
-        version: 6.0.3
+        specifier: 5.5.4
+        version: 5.5.4
 
 packages:
 
@@ -1078,8 +1078,8 @@ packages:
   tunnel-agent@0.6.0:
     resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}
 
-  typescript@6.0.3:
-    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
+  typescript@5.5.4:
+    resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2026,7 +2026,7 @@ snapshots:
     dependencies:
       safe-buffer: 5.2.1
 
-  typescript@6.0.3: {}
+  typescript@5.5.4: {}
 
   undici-types@5.26.5: {}
 
