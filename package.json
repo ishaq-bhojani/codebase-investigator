@@ -1,0 +1,10 @@
+{
+  "name": "codebase-investigator",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "echo run apps individually"
+  }
+}
