@@ -1,13 +1,14 @@
-import simpleGit from 'simple-git'
-import crypto from 'crypto'
-import fs from 'fs/promises'
+import fs from 'fs'
+import fsPromises from 'fs/promises'
 import path from 'path'
+import { pipeline } from 'stream/promises'
+import tar from 'tar'
 
 export async function cloneRepo(url) {
   const repoId = crypto.randomUUID()
   const repoPath = path.join('/tmp', repoId)
 
-  await fs.mkdir(repoPath, { recursive: true })
+  await fsPromises.mkdir(repoPath, { recursive: true })
 
   const match = url.match(/github\.com\/(.+?)\/(.+?)(\.git)?$/)
   if (!match) throw new Error("Only GitHub URLs supported")
@@ -19,7 +20,7 @@ export async function cloneRepo(url) {
   const res = await fetch(tarUrl)
 
   const filePath = path.join(repoPath, 'repo.tar.gz')
-  const fileStream = fsSync.createWriteStream(filePath)
+  const fileStream = fs.createWriteStream(filePath)
 
   await pipeline(res.body, fileStream)
 
