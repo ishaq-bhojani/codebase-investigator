@@ -8,7 +8,7 @@ export default function HomePage() {
   const [answer, setAnswer] = useState(null)
 
   async function investigate() {
-    const repoRes = await fetch('http://localhost:3001/repo', {
+    const repoRes = await fetch('https://api-production-1dd8.up.railway.app/repo', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -21,7 +21,7 @@ export default function HomePage() {
     const repoData = await repoRes.json()
 
     const response = await fetch(
-      'http://localhost:3001/investigate',
+      'https://api-production-1dd8.up.railway.app/investigate',
       {
         method: 'POST',
         headers: {
